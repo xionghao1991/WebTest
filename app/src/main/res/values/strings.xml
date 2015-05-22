@@ -4,4 +4,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="search">搜索</string>
+    <string name="zhaopin">招聘信息</string>
 </resources>
