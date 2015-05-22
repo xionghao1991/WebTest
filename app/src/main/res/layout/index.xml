@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/headerviewpager"
+      android:layout_width="match_parent"
+      android:layout_height="180dp"/>
+   <android.support.v7.widget.GridLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:columnCount="3"
+       app:rowCount="3"
+       android:padding="@dimen/activity_vertical_margin"
+       app:alignmentMode="alignMargins"
+       app:columnOrderPreserved="true"
+       app:orientation="horizontal"
+       >
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"
+           />
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+       <Button
+           app:layout_columnWeight="1"
+           app:layout_gravity="fill"
+           app:layout_rowWeight="1"/>
+
+
+   </android.support.v7.widget.GridLayout>
+
+</LinearLayout>
