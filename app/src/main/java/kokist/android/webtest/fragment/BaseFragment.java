@@ -1,6 +1,7 @@
 package kokist.android.webtest.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kokist.android.webtest.JobActivity;
 import kokist.android.webtest.R;
 import kokist.android.webtest.model.GridItem;
 import kokist.android.webtest.utils.Utils;
@@ -77,7 +79,34 @@ public class BaseFragment extends Fragment {
         gridvew.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent it;
+             switch (position){
+                 case 0:
+                     it=new Intent(context, JobActivity.class);
+                     it.putExtra("flag",position);
+                     context.startActivity(it);
+                     break;
+                 case 1:
+                     it=new Intent(context, JobActivity.class);
+                     it.putExtra("flag",position);
+                     context.startActivity(it);
+                     break;
+                 case 2:
+                     break;
+                 case 3:
+                     break;
+                 case 4:
+                     break;
+                 case 5:
+                     break;
+                 case 6:
+                     break;
+                 case 7:
+                     break;
+                 case 8:
+                     break;
 
+             }
             }
         });
         initanmiation();
@@ -114,7 +143,7 @@ public class BaseFragment extends Fragment {
         lineview.removeAllViews();
         for (int j = 0; j < i; j++) {
             View view=new View(context);
-            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(Utils.dpToPx(10),Utils.dpToPx(10));
+            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(Utils.dpToPx(5),Utils.dpToPx(5));
             params.setMargins(Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5));
             view.setLayoutParams(params);
             if (j==0){
