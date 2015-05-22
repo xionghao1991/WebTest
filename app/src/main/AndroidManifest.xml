@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".JobActivity"
             android:label="@string/zhaopin"/>
+        <activity android:name=".LoginActivity"
+            android:label="@string/loign"/>
     </application>
 
 </manifest>

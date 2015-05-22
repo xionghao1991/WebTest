@@ -4,8 +4,8 @@
     android:layout_height="wrap_content">
 <ImageView
     android:layout_marginTop="5dp"
-    android:layout_width="54dp"
-   android:layout_height="54dp"
+    android:layout_width="48dp"
+   android:layout_height="48dp"
     android:layout_gravity="center"
     android:src="@drawable/publish_icon_bendifuwu"
     android:id="@+id/grid_item_img" />

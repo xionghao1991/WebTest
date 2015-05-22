@@ -2,6 +2,7 @@ package kokist.android.webtest.fragment;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kokist.android.webtest.JobActivity;
+import kokist.android.webtest.LoginActivity;
 import kokist.android.webtest.R;
 import kokist.android.webtest.model.GridItem;
 import kokist.android.webtest.utils.Utils;
@@ -37,6 +39,8 @@ public class BaseFragment extends Fragment {
     private ViewPager viewpager;
     private GridView gridvew;
     private FragmentActivity context;
+    private SharedPreferences sp;
+    private boolean islogin;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -92,6 +96,7 @@ public class BaseFragment extends Fragment {
                      context.startActivity(it);
                      break;
                  case 2:
+                     CheckLogin();
                      break;
                  case 3:
                      break;
@@ -110,6 +115,17 @@ public class BaseFragment extends Fragment {
             }
         });
         initanmiation();
+    }
+
+    private void CheckLogin() {
+      sp=  context.getSharedPreferences("user",context.MODE_PRIVATE);
+      islogin=sp.getBoolean("islogin",false);
+        if (islogin){
+            return;
+        }else {
+            Intent intent=new Intent(context, LoginActivity.class);
+            context.startActivity(intent);
+        }
     }
 
     private void initrollview() {
