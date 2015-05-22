@@ -5,59 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <android.support.v4.view.ViewPager
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="212dp"
+      android:padding="16dp">
+    <android.support.v4.view.ViewPager
       android:id="@+id/headerviewpager"
       android:layout_width="match_parent"
       android:layout_height="180dp"/>
-   <android.support.v7.widget.GridLayout
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/point_layout"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:background="@color/transportgray"
+          android:layout_alignParentBottom="true"
+          ></LinearLayout>
+  </RelativeLayout>
+   <GridView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       app:columnCount="3"
-       app:rowCount="3"
-       android:padding="@dimen/activity_vertical_margin"
-       app:alignmentMode="alignMargins"
-       app:columnOrderPreserved="true"
-       app:orientation="horizontal"
+       android:numColumns="3"
+       android:padding="16dp"
+       android:id="@+id/gridview"
+       android:verticalSpacing="8dp"
        >
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"
-           />
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
-       <Button
-           app:layout_columnWeight="1"
-           app:layout_gravity="fill"
-           app:layout_rowWeight="1"/>
 
 
-   </android.support.v7.widget.GridLayout>
+
+   </GridView>
 
 </LinearLayout>

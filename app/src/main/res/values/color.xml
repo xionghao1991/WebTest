@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="red">#ffd66e12</color>
-    <color name="dark_red">#ff9d6516</color>
+    <color name="red">#ffd61f1f</color>
+    <color name="dark_orgen">#ff9d6516</color>
+    <color name="orgen">#ffd56e12</color>
+    <color name="blue">#ff53b5fd</color>
+    <color name="text_normal_gray">#ff737373</color>
+    <color name="transportgray">#88000000</color>
+    <color name="whlite">#ffffff</color>
 </resources>
