@@ -142,8 +142,8 @@ public class BaseFragment extends Fragment {
             public void onPageSelected(int position) {
 
                  if (lineview.getChildCount()>0){
-                     lineview.getChildAt(position).setBackgroundResource(R.color.orgen);
-                     lineview.getChildAt(oldpostion).setBackgroundResource(R.color.whlite);
+                     lineview.getChildAt(position).setBackgroundResource(R.drawable.ad_dot_press);
+                     lineview.getChildAt(oldpostion).setBackgroundResource(R.drawable.ad_dot_normal);
                  }
                 oldpostion=position;
             }
@@ -159,13 +159,13 @@ public class BaseFragment extends Fragment {
         lineview.removeAllViews();
         for (int j = 0; j < i; j++) {
             View view=new View(context);
-            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(Utils.dpToPx(5),Utils.dpToPx(5));
+            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(Utils.dpToPx(8),Utils.dpToPx(8));
             params.setMargins(Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5));
             view.setLayoutParams(params);
             if (j==0){
-                view.setBackgroundResource(R.color.orgen);
+                view.setBackgroundResource(R.drawable.ad_dot_press);
             }else {
-                view.setBackgroundResource(R.color.whlite);
+                view.setBackgroundResource(R.drawable.ad_dot_normal);
             }
             lineview.addView(view);
         }

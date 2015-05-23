@@ -6,4 +6,7 @@
     <string name="search">搜索</string>
     <string name="zhaopin">招聘信息</string>
     <string name="loign">登录</string>
+    <string name="reg">快速注册</string>
+    <string name="orderby_str">排序</string>
+    <string name="please_input_valicode">请输入验证码</string>
 </resources>

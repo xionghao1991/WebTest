@@ -8,4 +8,6 @@
     <color name="transportgray">#88000000</color>
     <color name="whlite">#ffffff</color>
     <color name="lightgary">#ffeeeeee</color>
+    <color name="view_bg">#ffb1b1b1</color>
+    <color name="tansport">#00000000</color>
 </resources>

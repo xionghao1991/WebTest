@@ -18,11 +18,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="2"
             android:id="@+id/tv_title"
             android:textSize="20sp"
-            android:text="上市公司高薪招聘销售，有能力就来，无需工作经验"
-            android:ellipsize="end"/>
+            android:text="上市公司高薪招聘销售，有能力就来，无需工作经验s"
+            android:ellipsize="end"
+            android:singleLine="true" />
           <TextView
               android:layout_width="match_parent"
               android:layout_height="wrap_content"

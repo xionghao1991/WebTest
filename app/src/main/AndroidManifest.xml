@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kokist.android.webtest" >
 
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +22,11 @@
             android:label="@string/zhaopin"/>
         <activity android:name=".LoginActivity"
             android:label="@string/loign"/>
+        <activity android:name=".RegActivity"
+            android:label="@string/reg"/>
+        <activity android:name=".ValidateActivity"
+            android:label="@string/please_input_valicode"
+            />
     </application>
 
 </manifest>
