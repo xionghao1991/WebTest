@@ -372,11 +372,11 @@
     <string name="smssdk_your_ccount_is_verified">验证成功</string>
     <!-- From: file:/D:/Androidproject/WebTest/smssd/src/main/res/values/smssdk_styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="android:Theme.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowNoTitle">true</item>
     </style>
-    <style name="CommonDialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground">@drawable/smssdk_dialog_bg</item>
+    <style name="CommonDialog" parent="Theme.AppCompat.Dialog">
+       
         <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

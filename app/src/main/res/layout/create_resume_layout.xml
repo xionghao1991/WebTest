@@ -144,6 +144,7 @@
                 android:layout_marginTop="16dp"
                 android:singleLine="false"
                 android:hint="自我评价"
+                android:lines="3"
                 android:textSize="@dimen/text_normal_size"
                 app:met_floatingLabel="highlight" />
 
@@ -154,6 +155,7 @@
                 android:textColor="@color/whlite"
                 android:textSize="@dimen/text_normal_size"
                 android:text="创建简历"
+                android:layout_margin="@dimen/activity_horizontal_margin"
                 />
 
         </LinearLayout>

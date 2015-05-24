@@ -27,13 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="9dp"
-                android:background="@drawable/smssdk_back_arrow" />
+                android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/smssdk_sharesdk_icon" />
+
         </LinearLayout>
 
         <LinearLayout
