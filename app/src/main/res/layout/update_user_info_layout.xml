@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar"
+         />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.Editstyle"
+
+        android:hint="请更改用户名"
+        android:textSize="@dimen/text_normal_size"
+        app:met_floatingLabel="highlight"
+
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+
+       />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.Editstyle"
+        android:hint="请更改密码"
+        android:textSize="@dimen/text_normal_size"
+        app:met_floatingLabel="highlight"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:id="@+id/radio"
+        >
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/company_user_rab"
+            style="@style/AppTheme.TextNoraml"
+            android:text="企业用户"
+
+            />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/person_user_rab"
+            style="@style/AppTheme.TextNoraml"
+            android:text="个人用户"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/btn_update"
+        android:background="@drawable/smssdk_btn_enable"
+        android:clickable="true"
+        android:textColor="@color/whlite" />
+
+</LinearLayout>

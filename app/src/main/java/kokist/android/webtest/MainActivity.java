@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import cn.smssdk.SMSSDK;
 import kokist.android.webtest.fragment.BaseFragment;
 import kokist.android.webtest.fragment.LeftMenuFragment;
 import kokist.android.webtest.utils.DbHelper;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        SMSSDK.initSDK(this, "7a79425cb0e0", "b9a0b736217d7135bae37fce384004e7");
         BaseFragment fragment=new BaseFragment();
         LeftMenuFragment  menuFragment=new LeftMenuFragment();
         initdatabase();

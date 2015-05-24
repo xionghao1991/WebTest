@@ -42,6 +42,23 @@
             android:layout_toRightOf="@+id/imageView2"
             android:layout_toEndOf="@+id/imageView2"
             android:layout_marginStart="21dp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:padding="16dp"
+                android:id="@+id/rl_jumpto_userinfoupdate"
+                >
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+
+                android:background="@drawable/personal_arrow"
+                 />
+            </RelativeLayout>
         </RelativeLayout>
 
         <View

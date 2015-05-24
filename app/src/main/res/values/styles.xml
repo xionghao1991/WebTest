@@ -12,4 +12,8 @@
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginTop">8dp</item>
     </style>
+    <style name="AppTheme.TextNoraml">
+        <item name="android:textColor">@color/text_normal_gray</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+    </style>
 </resources>

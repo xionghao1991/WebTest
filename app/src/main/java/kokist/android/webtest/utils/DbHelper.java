@@ -12,7 +12,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
-    public DbHelper(Context context, String name, int version){
+    public DbHelper(Context context,String name,int version){
         this(context, name, null, version);
     }
 
