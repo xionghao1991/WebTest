@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_marginTop="5dp"
-        android:text="求职发布"
+        android:text="@string/str_get_job_push"
         android:gravity="center"
         android:textColor="@color/text_normal_gray"
         android:id="@+id/grid_item_text" />
