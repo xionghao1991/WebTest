@@ -26,6 +26,7 @@ import java.util.List;
 
 import kokist.android.webtest.JobActivity;
 import kokist.android.webtest.LoginActivity;
+import kokist.android.webtest.PublishResumeActivity;
 import kokist.android.webtest.R;
 import kokist.android.webtest.model.GridItem;
 import kokist.android.webtest.utils.Utils;
@@ -66,6 +67,7 @@ public class BaseFragment extends Fragment {
     private List<Fragment> list;
     private List<GridItem> gridlist;
     private LinearLayout lineview;
+
     private void initView() {
         list = new ArrayList<Fragment>();
         initgridlist();
@@ -74,7 +76,7 @@ public class BaseFragment extends Fragment {
         list.add(new ImageFragment(2));
         list.add(new ImageFragment(3));
         gridvew = (GridView) view.findViewById(R.id.gridview);
-        lineview=(LinearLayout)view.findViewById(R.id.point_layout);
+        lineview = (LinearLayout) view.findViewById(R.id.point_layout);
 
         viewpager.setPageTransformer(true, new pagertrans());
         viewpager.setAdapter(new imgadapter(getFragmentManager()));
@@ -84,47 +86,70 @@ public class BaseFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent it;
-             switch (position){
-                 case 0:
-                     it=new Intent(context, JobActivity.class);
-                     it.putExtra("flag",position);
-                     context.startActivity(it);
-                     break;
-                 case 1:
-                     it=new Intent(context, JobActivity.class);
-                     it.putExtra("flag",position);
-                     context.startActivity(it);
-                     break;
-                 case 2:
-                     CheckLogin();
-                     break;
-                 case 3:
-                     break;
-                 case 4:
-                     break;
-                 case 5:
-                     break;
-                 case 6:
-                     break;
-                 case 7:
-                     break;
-                 case 8:
-                     break;
+                switch (position) {
+                    case 0:
+                        it = new Intent(context, JobActivity.class);
+                        it.putExtra("flag", position);
+                        context.startActivity(it);
+                        break;
+                    case 1:
+                        it = new Intent(context, JobActivity.class);
+                        it.putExtra("flag", position);
+                        context.startActivity(it);
+                        break;
+                    case 2:
+                        if (CheckLogin()) {
 
-             }
+                        }
+                        break;
+                    case 3:
+                        if (CheckLogin()) {
+                            it = new Intent(context, PublishResumeActivity.class);
+                            context.startActivity(it);
+                        }
+
+                        break;
+                    case 4:
+                        if (CheckLogin()) {
+
+                        }
+                        break;
+                    case 5:
+                        if (CheckLogin()) {
+
+                        }
+                        break;
+                    case 6:
+                        if (CheckLogin()) {
+
+                        }
+                        break;
+                    case 7:
+                        if (CheckLogin()) {
+
+                        }
+                        break;
+                    case 8:
+                        if (CheckLogin()) {
+
+                        }
+                        break;
+
+                }
             }
         });
         initanmiation();
     }
 
-    private void CheckLogin() {
-      sp=  context.getSharedPreferences("user",context.MODE_PRIVATE);
-      islogin=sp.getBoolean("islogin",false);
-        if (islogin){
-            return;
-        }else {
-            Intent intent=new Intent(context, LoginActivity.class);
+    private boolean CheckLogin() {
+        sp = context.getSharedPreferences("user", context.MODE_PRIVATE);
+        islogin = sp.getBoolean("islogin", false);
+        if (islogin) {
+            return true;
+        } else {
+            Intent intent = new Intent(context, LoginActivity.class);
             context.startActivity(intent);
+            return false;
         }
     }
 
@@ -132,7 +157,8 @@ public class BaseFragment extends Fragment {
         initdot(3);
         viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
-            int oldpostion=0;
+            int oldpostion = 0;
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -141,11 +167,11 @@ public class BaseFragment extends Fragment {
             @Override
             public void onPageSelected(int position) {
 
-                 if (lineview.getChildCount()>0){
-                     lineview.getChildAt(position).setBackgroundResource(R.drawable.ad_dot_press);
-                     lineview.getChildAt(oldpostion).setBackgroundResource(R.drawable.ad_dot_normal);
-                 }
-                oldpostion=position;
+                if (lineview.getChildCount() > 0) {
+                    lineview.getChildAt(position).setBackgroundResource(R.drawable.ad_dot_press);
+                    lineview.getChildAt(oldpostion).setBackgroundResource(R.drawable.ad_dot_normal);
+                }
+                oldpostion = position;
             }
 
             @Override
@@ -158,13 +184,13 @@ public class BaseFragment extends Fragment {
     private void initdot(int i) {
         lineview.removeAllViews();
         for (int j = 0; j < i; j++) {
-            View view=new View(context);
-            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(Utils.dpToPx(8),Utils.dpToPx(8));
-            params.setMargins(Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5),Utils.dpToPx(5));
+            View view = new View(context);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Utils.dpToPx(8), Utils.dpToPx(8));
+            params.setMargins(Utils.dpToPx(5), Utils.dpToPx(5), Utils.dpToPx(5), Utils.dpToPx(5));
             view.setLayoutParams(params);
-            if (j==0){
+            if (j == 0) {
                 view.setBackgroundResource(R.drawable.ad_dot_press);
-            }else {
+            } else {
                 view.setBackgroundResource(R.drawable.ad_dot_normal);
             }
             lineview.addView(view);
@@ -248,8 +274,8 @@ public class BaseFragment extends Fragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = View.inflate(context, R.layout.index_griditem_layout, null);
-           ImageView imageView= (ImageView) view.findViewById(R.id.grid_item_img);
-            TextView textView=(TextView)view.findViewById(R.id.grid_item_text);
+            ImageView imageView = (ImageView) view.findViewById(R.id.grid_item_img);
+            TextView textView = (TextView) view.findViewById(R.id.grid_item_text);
             imageView.setImageResource(gridlist.get(position).imgids);
             textView.setText(gridlist.get(position).text);
             return view;

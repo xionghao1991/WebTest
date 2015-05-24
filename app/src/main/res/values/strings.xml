@@ -11,4 +11,5 @@
     <string name="please_input_valicode">请输入验证码</string>
     <string name="str_get_job_push">求职发布</string>
     <string name="updateuserinfo">完善用户信息</string>
+    <string name="create_resume">发布简历</string>
 </resources>

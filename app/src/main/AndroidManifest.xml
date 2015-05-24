@@ -45,6 +45,8 @@
         <activity android:name=".UpadateUserInfoActivity"
             android:label="@string/updateuserinfo"
             />
+        <activity android:name=".PublishResumeActivity"
+            android:label="@string/create_resume"/>
     </application>
 
 </manifest>
