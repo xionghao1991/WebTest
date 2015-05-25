@@ -1,5 +1,6 @@
 package kokist.android.webtest;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class LoginoutActivity extends AppCompatActivity {
 
     private void init() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         sp = getSharedPreferences("user", MODE_PRIVATE);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -50,7 +52,7 @@ public class LoginoutActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.more, menu);
         return true;
     }
 
@@ -62,7 +64,10 @@ public class LoginoutActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_more) {
+
+            Intent intent=new Intent(this,UpadateUserInfoActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);

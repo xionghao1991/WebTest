@@ -122,6 +122,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                        editor.putBoolean("islogin",true);
                        editor.putString("username", username);
                        editor.commit();
+                       this.finish();
                    }
                    cursor.close();
                    cursor1.close();

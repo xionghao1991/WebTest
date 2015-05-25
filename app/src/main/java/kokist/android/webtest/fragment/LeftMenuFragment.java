@@ -53,13 +53,18 @@ public class LeftMenuFragment extends Fragment {
         rl_jumto_userinfoview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(context, LoginoutActivity.class);
-                startAct(intent);
+                Intent intent;
+                if (islogin) {
+                    intent = new Intent(context, LoginoutActivity.class);
+                    startAct(intent);
+                }else {
+                     intent=new Intent(context,LoginActivity.class);
+                     startAct(intent);
+                }
             }
         });
         sp = context.getSharedPreferences("user", Context.MODE_PRIVATE);
-        islogin = sp.getBoolean("islogin", false);
+
 
         checklogin();
         textView.setClickable(!islogin);
@@ -77,6 +82,7 @@ public class LeftMenuFragment extends Fragment {
     }
 
     private void checklogin() {
+        islogin = sp.getBoolean("islogin", false);
         if (islogin) {
             username = sp.getString("username", "");
             textView.setText(username);

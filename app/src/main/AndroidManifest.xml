@@ -56,7 +56,13 @@
         <activity android:name=".LoginoutActivity"
             android:label="个人资料"
             />
-
+        <activity android:name=".EnterPassCodeActivity"/>
+        <activity android:name=".Publish_Company_Activity"
+        android:label="发布公司信息"
+        />
+        <activity android:name=".PeixunActivity"
+            android:label="基础培训"
+            />
     </application>
 
 </manifest>

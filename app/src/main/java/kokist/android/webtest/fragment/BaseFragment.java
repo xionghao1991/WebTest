@@ -24,9 +24,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kokist.android.webtest.EnterPassCodeActivity;
 import kokist.android.webtest.JobActivity;
+import kokist.android.webtest.LittleLessionActivity;
 import kokist.android.webtest.LoginActivity;
+import kokist.android.webtest.PeixunActivity;
 import kokist.android.webtest.PublishResumeActivity;
+import kokist.android.webtest.Publish_Company_Activity;
 import kokist.android.webtest.R;
 import kokist.android.webtest.model.GridItem;
 import kokist.android.webtest.utils.Utils;
@@ -99,7 +103,9 @@ public class BaseFragment extends Fragment {
                         break;
                     case 2:
                         if (CheckLogin()) {
-
+                            it=new Intent(context, LittleLessionActivity.class);
+                            it.putExtra("flag",true);
+                            context.startActivity(it);
                         }
                         break;
                     case 3:
@@ -111,27 +117,35 @@ public class BaseFragment extends Fragment {
                         break;
                     case 4:
                         if (CheckLogin()) {
+                            it=new Intent(context, Publish_Company_Activity.class);
 
+                            context.startActivity(it);
                         }
                         break;
                     case 5:
                         if (CheckLogin()) {
-
+                            it=new Intent(context, EnterPassCodeActivity.class);
+                            it.putExtra("flag",true);
+                            context.startActivity(it);
                         }
                         break;
                     case 6:
                         if (CheckLogin()) {
-
+                            it=new Intent(context, EnterPassCodeActivity.class);
+                            it.putExtra("flag",false);
+                            context.startActivity(it);
                         }
                         break;
                     case 7:
                         if (CheckLogin()) {
-
+                           it=new Intent(context, LittleLessionActivity.class);
+                           context.startActivity(it);
                         }
                         break;
                     case 8:
                         if (CheckLogin()) {
-
+                            it=new Intent(context, PeixunActivity.class);
+                            context.startActivity(it);
                         }
                         break;
 
@@ -208,7 +222,7 @@ public class BaseFragment extends Fragment {
             R.drawable.publish_icon_house,
             R.drawable.publish_icon_car, R.drawable.publish_icon_zhuangxiujc, R.drawable.publish_icon_jiaoyu, R.drawable.publish_icon_pets
     };
-    private String strs[] = {"招聘信息", "人才浏览", "人资匹配", "求职发布", "招聘发布", "薪酬评价", "绩效评估", "微课程", "基础培训"};
+    private String strs[] = {"招聘信息", "人才浏览", "人职匹配", "求职发布", "招聘发布", "薪酬评价", "绩效评估", "微课程", "基础培训"};
 
     private void initgridlist() {
         gridlist = new ArrayList<GridItem>();

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.Editstyle"
+            android:id="@+id/et_password"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_title"
+            app:met_floatingLabel="highlight"
+            android:hint="请输入随机密匙"
+            app:met_baseColor="@color/whlite"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:met_primaryColor="#ff45bf1a"
+
+            app:met_textColorHint="@color/whlite"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.TextNoraml"
+            android:text="请输入密匙"
+            android:textSize="22sp"
+            android:id="@+id/tv_title"
+            android:textColor="@color/whlite"
+            android:layout_centerHorizontal="true"
+           android:layout_marginTop="100dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textColor="@color/whlite"
+            android:background="@drawable/smssdk_btn_enable"
+            android:layout_below="@+id/et_password"
+            android:layout_margin="16dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
