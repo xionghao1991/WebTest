@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <string-array name="smssdk_country_group_a">
 		<item>阿尔巴尼亚,355,110,27601|27602|27603|27604</item>
@@ -274,7 +274,7 @@
 		<item>中非共和国,236,71,62301|62302|62303|62304</item>
 		<item>中国,86,42,46006|46007|46005|46002|46003|46000|46001</item>
     </string-array>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -334,7 +334,7 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <color name="smssdk_black">#ff000000</color>
     <color name="smssdk_gray">#ff898989</color>
@@ -345,7 +345,7 @@
     <color name="smssdk_lv_tv_color">#ff353535</color>
     <color name="smssdk_transparent">#00000000</color>
     <color name="smssdk_white">#ffffffff</color>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
@@ -442,11 +442,11 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <drawable name="smssdk_dialog_btn_nor">#00000000</drawable>
     <drawable name="smssdk_dialog_btn_pre">#ff282a2b</drawable>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -477,7 +477,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <string name="smssdk_add_contact">添加</string>
     <string name="smssdk_back">返回 </string>
@@ -556,18 +556,18 @@
     <string name="smssdk_write_mobile_phone">请填写手机号码</string>
     <string name="smssdk_write_right_mobile_phone">请填写正确的手机号码</string>
     <string name="smssdk_your_ccount_is_verified">验证成功</string>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowNoTitle">true</item>
     </style>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1478,13 +1478,13 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <style name="CommonDialog" parent="Theme.AppCompat.Dialog">
        
         <item name="android:windowNoTitle">true</item>
     </style>
-    <!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/AndroidStudioProj/WebTest/smssd/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

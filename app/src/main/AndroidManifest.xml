@@ -47,6 +47,16 @@
             />
         <activity android:name=".PublishResumeActivity"
             android:label="@string/create_resume"/>
+
+        <activity android:name=".LittleLessionActivity"
+            android:label="微课程"
+            ></activity>
+        <activity android:name=".LittleLessionDetailActivity"
+            android:label="课程详情"/>
+        <activity android:name=".LoginoutActivity"
+            android:label="个人资料"
+            />
+
     </application>
 
 </manifest>

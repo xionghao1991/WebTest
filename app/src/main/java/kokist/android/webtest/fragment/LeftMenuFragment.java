@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import kokist.android.webtest.LoginActivity;
+import kokist.android.webtest.LoginoutActivity;
 import kokist.android.webtest.MainActivity;
 import kokist.android.webtest.R;
-import kokist.android.webtest.UpadateUserInfoActivity;
 
 /**
  * Created by Administrator on 2015/5/23.
@@ -53,7 +53,8 @@ public class LeftMenuFragment extends Fragment {
         rl_jumto_userinfoview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, UpadateUserInfoActivity.class);
+
+                Intent intent = new Intent(context, LoginoutActivity.class);
                 startAct(intent);
             }
         });

@@ -49,8 +49,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/company_user_rab"
             style="@style/AppTheme.TextNoraml"
+            android:checked="true"
             android:text="企业用户"
-
             />
         <android.support.v7.widget.AppCompatRadioButton
             android:layout_width="wrap_content"

@@ -30,7 +30,7 @@ public class UpadateUserInfoActivity extends AppCompatActivity {
     private String password;
     private Button btn_update;
     private RadioGroup radio;
-    private String destext;
+    private String destext="公司用户";
     private SharedPreferences sp;
     private final static String Tag="UpadateUserInfoActivity";
 
@@ -38,7 +38,12 @@ public class UpadateUserInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_user_info_layout);
-       toolbar = (Toolbar)findViewById(R.id.toolbar);
+        init();
+    }
+
+    private void init() {
+
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -48,23 +53,19 @@ public class UpadateUserInfoActivity extends AppCompatActivity {
             }
         });
         sp= getSharedPreferences("user",MODE_PRIVATE);
-        init();
-
-
-    }
-
-    private void init() {
         et_username= (MaterialEditText) findViewById(R.id.et_username);
         et_password=(MaterialEditText)findViewById(R.id.et_password);
         final DataBaseUtils utils=new DataBaseUtils(this);
         TelephonyManager phoneMgr = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
         final String myphonenumber = phoneMgr.getLine1Number();
-        Cursor cursor= utils.Query("select * from user where phonenumber=?", new String[]{myphonenumber});
+        final String   myphonenumber2= myphonenumber.substring(3, myphonenumber.length());
+        Cursor cursor= utils.Query("select * from user where phonenumber=?", new String[]{myphonenumber2});
         while (cursor.moveToNext()){
             username= cursor.getString(cursor.getColumnIndex("username"));
             password=cursor.getString(cursor.getColumnIndex("password"));
             Log.d(Tag,"username:--"+username+"--password:--"+password);
         }
+        cursor.close();
         et_password.setText(password);
         et_username.setText(username);
         radio= (RadioGroup)findViewById(R.id.radio);
@@ -88,10 +89,12 @@ public class UpadateUserInfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkForm()) {
                     ContentValues contentValues=new ContentValues();
+                    String username=et_username.getEditableText().toString().trim();
+                    String password=et_password.getEditableText().toString().trim();
                     contentValues.put("username",username);
                     contentValues.put("password",password);
                     contentValues.put("desc",destext);
-                    int result=utils.Update(contentValues,"user","phonenumebr=?",new String[]{myphonenumber});
+                    int result=utils.Update(contentValues,"user","phonenumber=?",new String[]{myphonenumber2});
                     if (result>0){
                      SharedPreferences.Editor editor= sp.edit();
                         editor.putString("username",username);
