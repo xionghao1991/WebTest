@@ -1,9 +1,12 @@
 package kokist.android.webtest;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import kokist.android.webtest.utils.AlertLoading;
 
 /**
  * Created by Administrator on 2015/5/25.
@@ -11,6 +14,7 @@ import android.view.View;
 public class EnterPassCodeActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private View loadingview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,18 @@ public class EnterPassCodeActivity extends AppCompatActivity {
             toolbar.setTitle("绩效评估实验系统");
         }
         setSupportActionBar(toolbar);
+       loadingview= findViewById(R.id.loadingview);
+        final AlertLoading loading=new AlertLoading(this);
+        loading.setText("正在进入实验，请等待...");
+        loading.showLoading();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loading.dissmissloading();
+                loadingview.setVisibility(View.GONE);
+            }
+        }, 3000);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

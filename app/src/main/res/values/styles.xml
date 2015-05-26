@@ -16,4 +16,9 @@
         <item name="android:textColor">@color/text_normal_gray</item>
         <item name="android:textSize">@dimen/text_normal_size</item>
     </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/whlite</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
 </resources>

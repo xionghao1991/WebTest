@@ -46,6 +46,16 @@
             android:layout_below="@+id/et_password"
             android:layout_margin="16dp" />
 
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/whlite"
+            android:id="@+id/loadingview"
+          >
+
+
+        </FrameLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

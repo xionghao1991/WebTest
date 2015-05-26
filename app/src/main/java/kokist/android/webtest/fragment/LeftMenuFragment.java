@@ -50,6 +50,14 @@ public class LeftMenuFragment extends Fragment {
         View view = inflater.inflate(R.layout.left_menu, null);
         textView = (TextView) view.findViewById(R.id.username_text);
         View rl_jumto_userinfoview = view.findViewById(R.id.rl_jumpto_userinfoupdate);
+        View tv_exit=view.findViewById(R.id.tv_exit);
+        tv_exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)context).closedarwer();
+                ((MainActivity)context).onBackPressed();
+            }
+        });
         rl_jumto_userinfoview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

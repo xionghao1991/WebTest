@@ -1,10 +1,14 @@
 package kokist.android.webtest;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import kokist.android.webtest.utils.AlertLoading;
 
 /**
  * Created by Administrator on 2015/5/24.
@@ -38,9 +42,24 @@ public class LittleLessionDetailActivity extends AppCompatActivity{
         little_lession_webview.setBackgroundResource(R.color.whlite);
         little_lession_webview.getSettings().setJavaScriptEnabled(true);
         if (flag){
-            little_lession_webview.loadUrl("http://www.wenjuan.com/s/iiuiaa");
+            little_lession_webview.loadUrl("http://www.wenjuan.com/s/nYvayy/");
         }else {
             little_lession_webview.loadUrl("file:///android_asset/index.html");
         }
+        final AlertLoading alertLoading=new AlertLoading(LittleLessionDetailActivity.this);
+        little_lession_webview.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                alertLoading.showLoading();
+
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+               alertLoading.dissmissloading();
+            }
+        });
     }
 }

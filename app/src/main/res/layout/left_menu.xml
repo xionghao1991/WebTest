@@ -384,7 +384,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="退出程序"
             android:layout_weight="1"
-            android:id="@+id/textView10"
+            android:id="@+id/tv_exit"
             android:gravity="center"
             android:textColor="@color/dark_orgen"
             android:layout_marginRight="16dp" />

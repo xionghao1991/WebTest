@@ -1,9 +1,11 @@
 package kokist.android.webtest;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        SMSSDK.initSDK(this, "7a79425cb0e0", "b9a0b736217d7135bae37fce384004e7");
+        SMSSDK.initSDK(this, "7b1949e9f4ab", "5c32acb172c5da26050486e5008f51cd");
         BaseFragment fragment=new BaseFragment();
         LeftMenuFragment  menuFragment=new LeftMenuFragment();
         initdatabase();
@@ -80,6 +82,26 @@ public class MainActivity extends AppCompatActivity {
         this.intent=intent;
         rootview.closeDrawer(Gravity.LEFT);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setTitle("提示");
+        builder.setMessage("确定退出么？");
+        builder.setNegativeButton("确认", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                MainActivity.this.finish();
+            }
+        });
+        builder.setPositiveButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.show();
     }
 
     @Override
