@@ -6,6 +6,7 @@
         <item name="colorAccent">@color/orgen</item>
         <item name="colorPrimary">@color/orgen</item>
        <item name="colorPrimaryDark">@color/dark_orgen</item>
+
     </style>
     <style name="AppTheme.Editstyle">
         <item name="android:layout_marginLeft">16dp</item>

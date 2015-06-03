@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="red">#ffd61f1f</color>
-    <color name="dark_orgen">#ff9d6516</color>
-    <color name="orgen">#ffd56e12</color>
+    <color name="red">#fffd1c0c</color>
+    <color name="dark_orgen">#ffe85e10</color>
+    <color name="orgen">#fffd6612</color>
     <color name="blue">#ff53b5fd</color>
     <color name="text_normal_gray">#ff737373</color>
     <color name="transportgray">#88000000</color>
@@ -10,4 +10,6 @@
     <color name="lightgary">#ffeeeeee</color>
     <color name="view_bg">#ffb1b1b1</color>
     <color name="tansport">#00000000</color>
+    <color name="green">#00ff00</color>
+
 </resources>

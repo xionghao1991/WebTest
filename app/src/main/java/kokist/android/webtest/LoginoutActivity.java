@@ -8,6 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewConfiguration;
+
+import java.lang.reflect.Field;
 
 /**
  * Created by Administrator on 2015/5/25.
@@ -22,6 +25,15 @@ public class LoginoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginout_activtiy_layout);
+        try {
+            ViewConfiguration mconfig = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            if(menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(mconfig, false);
+            }
+        } catch (Exception ex) {
+        }
         init();
     }
 
@@ -44,6 +56,7 @@ public class LoginoutActivity extends AppCompatActivity {
                 editor.putBoolean("islogin", false);
                 editor.putString("username", "");
                 editor.commit();
+                LoginoutActivity.this.finish();
             }
         });
 

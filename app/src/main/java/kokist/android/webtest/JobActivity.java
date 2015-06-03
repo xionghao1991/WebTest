@@ -24,6 +24,11 @@ public class JobActivity extends AppCompatActivity {
         setContentView(R.layout.job_layout);
        flag= getIntent().getIntExtra("flag",0);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (flag==0){
+            toolbar.setTitle("HR2.0-招聘信息");
+        }else {
+            toolbar.setTitle("HR2.0-人才浏览");
+        }
          listview= (ListView) findViewById(R.id.joblist);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         setSupportActionBar(toolbar);

@@ -33,7 +33,7 @@ public class LittleLessionActivity extends AppCompatActivity {
        flag= getIntent().getBooleanExtra("flag",false);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         if (flag){
-            toolbar.setTitle("人职匹配");
+            toolbar.setTitle("HR2.0-人职匹配");
         }
         setSupportActionBar(toolbar);
 

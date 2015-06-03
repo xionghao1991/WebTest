@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import cn.jpush.android.api.JPushInterface;
 import cn.smssdk.SMSSDK;
 import kokist.android.webtest.fragment.BaseFragment;
 import kokist.android.webtest.fragment.LeftMenuFragment;
@@ -44,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initdatabase() {
         DbHelper dbHelper=new DbHelper(this,"userdata",1);
-
+        //init();
+    }
+    // 初始化 JPush。如果已经初始化，但没有登录成功，则执行重新登录。
+    private void init(){
+        JPushInterface.init(getApplicationContext());
     }
 
     private void initView() {
