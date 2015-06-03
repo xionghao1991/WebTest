@@ -4,7 +4,7 @@
     </style>
 
     <!-- dialog -->
-    <style name="CommonDialog" parent="Theme.AppCompat.Dialog">
+    <style name="CommonDialog" parent="Theme.AppCompat.Light.Dialog">
        
         <item name="android:windowNoTitle">true</item>
     </style>
