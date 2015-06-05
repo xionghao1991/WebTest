@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -17,6 +18,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import kokist.android.webtest.utils.AlertLoading;
+import kokist.android.webtest.utils.LoadingView;
 
 /**
  * Created by Administrator on 2015/5/25.
@@ -29,6 +31,7 @@ public class EnterPassCodeActivity extends AppCompatActivity {
     private   String loginexpurl="http://192.168.1.111/Participant/Loginexp.aspx?id=";
     private SharedPreferences sp;
     private String username;
+    private FrameLayout framelayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,8 @@ public class EnterPassCodeActivity extends AppCompatActivity {
 
     @SuppressLint("JavascriptInterface")
     private void init() {
+
+
         boolean flag = getIntent().getBooleanExtra("flag", false);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         if (flag){
@@ -46,11 +51,12 @@ public class EnterPassCodeActivity extends AppCompatActivity {
         }else {
             toolbar.setTitle("Hr2.0-绩效评估实验系统");
         }
+
         setSupportActionBar(toolbar);
         webView= (WebView) findViewById(R.id.enter_passcode_webview);
-        final AlertLoading loading=new AlertLoading(this);
-        loading.setText("正在进入实验，请等待...");
-        loading.showLoading();
+        final LoadingView loading=new LoadingView();
+        framelayout= (FrameLayout)findViewById(R.id.framelayout);
+        loading.showloadingView(framelayout,this);
         sp = getSharedPreferences("user", MODE_PRIVATE);
         username=sp.getString("username","");
         regurl=regurl+"?username="+username+"&password=123456";
@@ -77,9 +83,12 @@ public class EnterPassCodeActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("TAG", error.getMessage(), error);
-                loading.dissmissloading();
+                loading.dissMissloadingView();
                 loginexpurl+=102;
                 webView.loadUrl(loginexpurl);
+//
+
+                
             }
         });
         mQueue.add(stringRequest);
@@ -87,23 +96,17 @@ public class EnterPassCodeActivity extends AppCompatActivity {
 
 
         webView.setWebViewClient(new WebViewClient() {
-
             @Override
 
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-
                 view.loadUrl(url);
-
                 //如果不需要其他对点击链接事件的处理返回true，否则返回false
-
                 return true;
-
             }
-
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                loading.dissmissloading();
+                loading.dissMissloadingView();
             }
         });
 
