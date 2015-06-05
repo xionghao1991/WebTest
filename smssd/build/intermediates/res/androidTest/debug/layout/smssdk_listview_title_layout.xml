@@ -14,4 +14,4 @@
 	        android:textColor="#999999"
     		android:background="#eae8ee"/>
 </RelativeLayout>
-<!-- From: file:/D:/Androidproject/WebTest/smssd/src/main/res/layout/smssdk_listview_title_layout.xml --><!-- From: file:/D:/Androidproject/WebTest/smssd/build/intermediates/bundles/debug/res/layout/smssdk_listview_title_layout.xml -->
+<!-- From: file:/D:/WebTest/smssd/src/main/res/layout/smssdk_listview_title_layout.xml --><!-- From: file:/D:/WebTest/smssd/build/intermediates/bundles/debug/res/layout/smssdk_listview_title_layout.xml -->

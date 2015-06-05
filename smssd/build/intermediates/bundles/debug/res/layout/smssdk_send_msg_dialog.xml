@@ -28,7 +28,7 @@
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
         android:text="@string/smssdk_make_sure_mobile_detail"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15sp" />
 
     <TextView
@@ -38,13 +38,13 @@
         android:layout_marginBottom="15dip"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:textColor="#ffffff"
+        android:textColor="#8cb2ff"
         android:textSize="15sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:background="#ff737373" />
+        android:background="#45737373" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,12 +59,12 @@
             android:background="@drawable/smssdk_dialog_btn_back"
             android:padding="10dip"
             android:text="@string/smssdk_ok"
-            android:textColor="#ffffff" />
+            android:textColor="#fc5326" />
 
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
-            android:background="#ff737373" />
+            android:background="#45737373" />
 
         <Button
             android:id="@+id/btn_dialog_cancel"
@@ -75,7 +75,7 @@
             android:background="@drawable/smssdk_dialog_btn_back"
             android:padding="10dip"
             android:text="@string/smssdk_cancel"
-            android:textColor="#ffffff" />
+            android:textColor="#5e5e5e" />
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/D:/Androidproject/WebTest/smssd/src/main/res/layout/smssdk_send_msg_dialog.xml -->
+</LinearLayout><!-- From: file:/D:/WebTest/smssd/src/main/res/layout/smssdk_send_msg_dialog.xml -->

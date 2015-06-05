@@ -27,8 +27,9 @@ public class EnterPassCodeActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private WebView webView;
-    private   String regurl="http://192.168.1.111/Interface/register.ashx";
-    private   String loginexpurl="http://192.168.1.111/Participant/Loginexp.aspx?id=";
+    private String Hosturl="http://test.expeconomics.org";
+    private String regurl = Hosturl+"/Interface/register.ashx";
+    private String loginexpurl = Hosturl+"/Participant/Loginexp.aspx?id=";
     private SharedPreferences sp;
     private String username;
     private FrameLayout framelayout;
@@ -45,21 +46,21 @@ public class EnterPassCodeActivity extends AppCompatActivity {
 
 
         boolean flag = getIntent().getBooleanExtra("flag", false);
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
-        if (flag){
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (flag) {
             toolbar.setTitle("Hr2.0-薪酬评价实验系统");
-        }else {
+        } else {
             toolbar.setTitle("Hr2.0-绩效评估实验系统");
         }
 
         setSupportActionBar(toolbar);
-        webView= (WebView) findViewById(R.id.enter_passcode_webview);
-        final LoadingView loading=new LoadingView();
-        framelayout= (FrameLayout)findViewById(R.id.framelayout);
-        loading.showloadingView(framelayout,this);
+        webView = (WebView) findViewById(R.id.enter_passcode_webview);
+        final LoadingView loading = new LoadingView();
+        framelayout = (FrameLayout) findViewById(R.id.framelayout);
+        loading.showloadingView(framelayout, this);
         sp = getSharedPreferences("user", MODE_PRIVATE);
-        username=sp.getString("username","");
-        regurl=regurl+"?username="+username+"&password=123456";
+        username = sp.getString("username", "");
+        regurl = regurl + "?username=" + username + "&password=123456";
         RequestQueue mQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(regurl,
                 new Response.Listener<String>() {
@@ -67,14 +68,14 @@ public class EnterPassCodeActivity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         Log.d("TAG", response);
-                        if (!response.equals("-1")){
+                        if (!response.equals("-1")) {
                             loginexpurl += response;
-                            SharedPreferences.Editor editor= sp.edit();
-                            editor.putString("id",response);
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.putString("id", response);
                             editor.commit();
                             webView.loadUrl(loginexpurl);
-                        }else {
-                            String id=sp.getString("id", "");
+                        } else {
+                            String id = sp.getString("id", "");
                             loginexpurl += id;
                             webView.loadUrl(loginexpurl);
                         }
@@ -84,11 +85,11 @@ public class EnterPassCodeActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.e("TAG", error.getMessage(), error);
                 loading.dissMissloadingView();
-                loginexpurl+=102;
+                loginexpurl += 102;
                 webView.loadUrl(loginexpurl);
 //
 
-                
+
             }
         });
         mQueue.add(stringRequest);
@@ -103,6 +104,7 @@ public class EnterPassCodeActivity extends AppCompatActivity {
                 //如果不需要其他对点击链接事件的处理返回true，否则返回false
                 return true;
             }
+
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
@@ -120,18 +122,19 @@ public class EnterPassCodeActivity extends AppCompatActivity {
         });
 
     }
+
     final class InJavaScriptLocalObj {
         public void showSource(String html) {
-            System.out.println("====>html="+html);
+            System.out.println("====>html=" + html);
         }
     }
 
     @Override
     public void onBackPressed() {
-       if (webView.canGoBack()){
-           webView.goBack();
-       }else {
-           EnterPassCodeActivity.this.finish();
-       }
+        if (webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            EnterPassCodeActivity.this.finish();
+        }
     }
 }
