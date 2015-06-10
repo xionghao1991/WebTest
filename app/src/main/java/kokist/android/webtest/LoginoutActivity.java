@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
 
+import com.tencent.tauth.Tencent;
+
 import java.lang.reflect.Field;
 
 /**
@@ -20,11 +22,13 @@ public class LoginoutActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private View loginout_btn;
     private SharedPreferences sp;
+    private Tencent mTencent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginout_activtiy_layout);
+        mTencent = Tencent.createInstance("1104698030", this.getApplicationContext());
         try {
             ViewConfiguration mconfig = ViewConfiguration.get(this);
             Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
@@ -56,6 +60,7 @@ public class LoginoutActivity extends AppCompatActivity {
                 editor.putBoolean("islogin", false);
                 editor.putString("username", "");
                 editor.commit();
+                mTencent.logout(LoginoutActivity.this);
                 LoginoutActivity.this.finish();
             }
         });

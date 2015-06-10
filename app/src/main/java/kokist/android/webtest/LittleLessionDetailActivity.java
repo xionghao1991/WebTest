@@ -26,12 +26,17 @@ public class LittleLessionDetailActivity extends AppCompatActivity{
         setContentView(R.layout.little_lession_detail_layout);
         init();
     }
-
     private void init() {
         boolean flag = getIntent().getBooleanExtra("flag", false);
+        String title= getIntent().getStringExtra("title");
+        int id=getIntent().getIntExtra("id",0);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         if (flag){
-            toolbar.setTitle("人职匹配调研");
+            if (!title.isEmpty()) {
+                toolbar.setTitle(title);
+            }else {
+                toolbar.setTitle("人职匹配调研");
+            }
         }
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
@@ -46,9 +51,23 @@ public class LittleLessionDetailActivity extends AppCompatActivity{
         little_lession_webview.setBackgroundResource(R.color.whlite);
         little_lession_webview.getSettings().setJavaScriptEnabled(true);
         if (flag){
+            switch (id){
+                case R.id.DISK:
+
+                    break;
+                case R.id.jixing:
+
+                    break;
+                case R.id.MBTF:
+
+                    break;
+                case R.id.huolande:
+
+                    break;
+            }
             little_lession_webview.loadUrl("http://www.wenjuan.com/s/nYvayy/");
         }else {
-            little_lession_webview.loadUrl("file:///android_asset/index.html");
+            little_lession_webview.loadUrl("http://m.eol.cn/gaokao/201506/t20150610_1271424.shtml");
         }
         final LoadingView alertLoading=new LoadingView();
         little_lession_webview.setWebViewClient(new WebViewClient(){
@@ -56,13 +75,11 @@ public class LittleLessionDetailActivity extends AppCompatActivity{
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 alertLoading.showloadingView(framelayout,LittleLessionDetailActivity.this);
-
             }
-
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-               alertLoading.dissMissloadingView();
+                alertLoading.dissMissloadingView();
             }
         });
     }

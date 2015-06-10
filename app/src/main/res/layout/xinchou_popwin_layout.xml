@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ListView
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:id="@+id/left_popwin_menu"
+    android:layout_height="wrap_content"></ListView>
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:id="@+id/right_popwin_menu"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

@@ -23,7 +23,7 @@
                 android:layout_height="80dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="24dp"
-                android:src="@drawable/app_logo" />
+                android:src="@mipmap/ic_launcher" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -136,6 +136,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
+                    android:id="@+id/qq_login_btn"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 

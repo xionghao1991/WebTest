@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">HR2.0</string>
+    <string name="app_name">HRM2.0</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="search">搜索</string>
-    <string name="zhaopin">HR2.0-招聘信息</string>
-    <string name="loign">HR2.0-登录</string>
-    <string name="reg">HR2.0-快速注册</string>
+    <string name="zhaopin">HRM2.0-招聘信息</string>
+    <string name="loign">HRM2.0-登录</string>
+    <string name="reg">HRM2.0-快速注册</string>
     <string name="orderby_str">排序</string>
     <string name="please_input_valicode">请输入验证码</string>
     <string name="str_get_job_push">HR2.0-求职发布</string>
     <string name="updateuserinfo">完善用户信息</string>
-    <string name="create_resume">HR2.0-发布简历</string>
+    <string name="create_resume">HRM2.0-发布简历</string>
     <string name="more">更新信息</string>
-    <string name="wkc">HR2.0-微课程</string>
+    <string name="wkc">HRM2.0-微课程</string>
 </resources>

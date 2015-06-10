@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        style="@style/AppTheme.TextNoraml"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center|left"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/fist"
+        android:text="货币偏好" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg"/>
+
+    <TextView
+        style="@style/AppTheme.TextNoraml"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/second"
+        android:gravity="center|left"
+        android:text="娱乐偏好" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg"/>
+
+</LinearLayout>

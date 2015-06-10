@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/whlite">
+        android:background="@color/whlite"
+        android:id="@+id/spiter_bar"
+        android:orientation="horizontal">
 
 
         <RelativeLayout
@@ -18,175 +20,181 @@
             android:layout_weight="1"
 
             >
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="全重庆"
-                android:layout_centerInParent="true"
                 android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="全重庆"
                 android:textColor="@color/text_normal_gray" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tradeline_filter_btn_icon_normal"
                 android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/textView2"
                 android:layout_toRightOf="@+id/textView2"
-                android:layout_toEndOf="@+id/textView2" />
+                android:src="@drawable/tradeline_filter_btn_icon_normal" />
 
         </RelativeLayout>
 
         <View
             android:layout_width="1px"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_height="match_parent"
-            android:background="@color/view_bg"
-            ></View>
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view_bg"></View>
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
+            android:layout_weight="1">
 
-            >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="不限"
-                android:layout_centerInParent="true"
                 android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="不限"
                 android:textColor="@color/text_normal_gray" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tradeline_filter_btn_icon_normal"
-
                 android:layout_centerVertical="true"
-               android:layout_toRightOf="@+id/textView3" />
+                android:layout_toRightOf="@+id/textView3"
+                android:src="@drawable/tradeline_filter_btn_icon_normal" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="1px"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_height="match_parent"
-            android:background="@color/view_bg"
-            ></View>
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view_bg"></View>
+
+        <RelativeLayout
+            android:id="@+id/xinchoujili_rl"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/xinchoujili_rl_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="薪资偏好"
+                android:textColor="@color/text_normal_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/xinchoujili_rl_img"
+                android:layout_toEndOf="@+id/xinchoujili_rl_text"
+                android:layout_toRightOf="@+id/xinchoujili_rl_text"
+                android:src="@drawable/tradeline_filter_btn_icon_normal" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view_bg"></View>
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
 
             >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="薪资结算"
-                android:layout_centerInParent="true"
-                android:id="@+id/textView4"
-                android:textColor="@color/text_normal_gray" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tradeline_filter_btn_icon_normal"
-                android:layout_toRightOf="@+id/textView4"
-                android:layout_toEndOf="@+id/textView4"
-                android:layout_centerVertical="true"
-               />
 
-        </RelativeLayout>
-        <View
-            android:layout_width="1px"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_height="match_parent"
-            android:background="@color/view_bg"
-            ></View>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-
-            >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/orderby_str"
-                android:layout_centerInParent="true"
                 android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/orderby_str"
                 android:textColor="@color/text_normal_gray" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tradeline_filter_btn_icon_normal"
                 android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/textView5"
                 android:layout_toRightOf="@+id/textView5"
-                android:layout_toEndOf="@+id/textView5" />
+                android:src="@drawable/tradeline_filter_btn_icon_normal" />
 
         </RelativeLayout>
     </LinearLayout>
-<View
-    android:layout_width="match_parent"
-    android:layout_height="1px"
-    android:background="@color/view_bg"
-    ></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg"></View>
+
     <ListView
+        android:id="@+id/joblist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/joblist"
         android:background="@color/whlite"></ListView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/view_bg"
-        ></View>
+        android:background="@color/view_bg"></View>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@color/whlite">
+        android:background="@color/whlite"
+        android:orientation="horizontal">
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-
             >
-           <RelativeLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_centerInParent="true"
-               >
-               <ImageView
-                   android:layout_width="24dp"
-                   android:layout_height="24dp"
-                   android:layout_centerVertical="true"
-                   android:layout_marginRight="5dp"
-                   android:id="@+id/tab_baricon1"
-                   android:scaleType="centerInside"
-                   android:src="@drawable/wb_infolist_tap_all_pressed"
-                   />
-               <TextView
-                   android:layout_width="36dp"
-                   android:layout_height="wrap_content"
-                   android:text="全城"
-                   android:textSize="@dimen/text_normal_size"
-                   android:textColor="@color/text_normal_gray"
-                   android:layout_toRightOf="@+id/tab_baricon1"
-                   android:layout_centerVertical="true"
-                   />
-           </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/tab_baricon1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/wb_infolist_tap_all_pressed" />
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tab_baricon1"
+                    android:text="全城"
+                    android:textColor="@color/text_normal_gray"
+                    android:textSize="@dimen/text_normal_size" />
+            </RelativeLayout>
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="1px"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_height="match_parent"
-            android:background="@color/view_bg"
-            ></View>
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view_bg"></View>
+
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -197,25 +205,24 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                >
+                android:layout_centerInParent="true">
+
                 <ImageView
+                    android:id="@+id/tab_baricon2"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
-                    android:id="@+id/tab_baricon2"
                     android:layout_marginRight="5dp"
-                    android:src="@drawable/wb_infolist_tap_near_normal"
-                    />
+                    android:src="@drawable/wb_infolist_tap_near_normal" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="附近"
-                    android:textSize="@dimen/text_normal_size"
-                    android:textColor="@color/text_normal_gray"
-                    android:layout_toRightOf="@+id/tab_baricon2"
                     android:layout_centerVertical="true"
-                    />
+                    android:layout_toRightOf="@+id/tab_baricon2"
+                    android:text="附近"
+                    android:textColor="@color/text_normal_gray"
+                    android:textSize="@dimen/text_normal_size" />
             </RelativeLayout>
 
         </RelativeLayout>

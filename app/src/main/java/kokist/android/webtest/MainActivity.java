@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.tencent.tauth.Tencent;
+
 import cn.jpush.android.api.JPushInterface;
 import cn.smssdk.SMSSDK;
 import kokist.android.webtest.fragment.BaseFragment;
@@ -28,11 +30,14 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout rootview;
     private ActionBarDrawerToggle mDrawerToggle;
     private Intent intent;
+    private Tencent mTencent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         initView();
         SMSSDK.initSDK(this, "7b1949e9f4ab", "5c32acb172c5da26050486e5008f51cd");
         BaseFragment fragment=new BaseFragment();

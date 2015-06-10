@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whlite"
+    >
+
+    <TextView
+        style="@style/AppTheme.TextNoraml"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center|left"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/pingjun"
+        android:text="平均能力曲线" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg"/>
+
+    <TextView
+        style="@style/AppTheme.TextNoraml"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/shangsheng"
+        android:gravity="center|left"
+        android:text="上线能力曲线" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg"/>
+    <TextView
+        style="@style/AppTheme.TextNoraml"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center|left"
+        android:id="@+id/xiajiang"
+        android:layout_marginLeft="16dp"
+        android:text="下线能力曲线" />
+
+
+</LinearLayout>

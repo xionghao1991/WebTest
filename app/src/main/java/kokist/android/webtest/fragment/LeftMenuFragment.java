@@ -3,13 +3,18 @@ package kokist.android.webtest.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import kokist.android.webtest.LoginActivity;
 import kokist.android.webtest.LoginoutActivity;
@@ -26,6 +31,7 @@ public class LeftMenuFragment extends Fragment {
     private SharedPreferences sp;
     private boolean islogin;
     private String username;
+    private ImageView imgview;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -73,7 +79,8 @@ public class LeftMenuFragment extends Fragment {
         });
         sp = context.getSharedPreferences("user", Context.MODE_PRIVATE);
 
-
+        imgview=(ImageView)view.findViewById(R.id.person_user_icon);
+        Picasso.with(context).load(R.mipmap.ic_launcher).transform(new CropSquareTransformation()).into(imgview);
         checklogin();
         textView.setClickable(!islogin);
         textView.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +94,20 @@ public class LeftMenuFragment extends Fragment {
         });
 
         return view;
+    }
+    public class CropSquareTransformation implements Transformation {
+        @Override
+        public Bitmap transform(Bitmap source) {
+            int size = Math.min(source.getWidth(), source.getHeight());
+            int x = (source.getWidth() - size) / 2;
+            int y = (source.getHeight() - size) / 2;
+            Bitmap result = Bitmap.createBitmap(source, x, y, size, size);
+            if (result != source) {
+                source.recycle();
+            }
+            return result;
+        }
+        @Override public String key() { return "square()"; }
     }
 
     private void checklogin() {

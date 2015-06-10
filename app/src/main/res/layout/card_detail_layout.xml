@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试技术"
+        android:textColor="@color/blue"
+
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        android:background="@color/view_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/MBTF"
+            android:text="MBTF" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/DISK"
+            android:text="DISK" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/huolande"
+            android:text="霍兰德性格" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+
+            android:background="@color/view_bg" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="MBTF" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/jixing"
+            android:text="几型人格" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/view_bg" />
+
+        <TextView
+            style="@style/AppTheme.TextNoraml"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/view_bg" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+
+        android:background="@color/view_bg" />
+
+</LinearLayout>

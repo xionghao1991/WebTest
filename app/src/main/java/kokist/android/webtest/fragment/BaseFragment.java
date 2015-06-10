@@ -29,9 +29,12 @@ import kokist.android.webtest.JobActivity;
 import kokist.android.webtest.LittleLessionActivity;
 import kokist.android.webtest.LoginActivity;
 import kokist.android.webtest.PeixunActivity;
+import kokist.android.webtest.PiPeiActivity;
 import kokist.android.webtest.PublishResumeActivity;
 import kokist.android.webtest.Publish_Company_Activity;
 import kokist.android.webtest.R;
+import kokist.android.webtest.XinChouActivity;
+import kokist.android.webtest.ZhaoPinActivity;
 import kokist.android.webtest.model.GridItem;
 import kokist.android.webtest.utils.Utils;
 
@@ -50,7 +53,6 @@ public class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
     }
 
     @Override
@@ -90,65 +92,56 @@ public class BaseFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent it;
-                switch (position) {
-                    case 0:
-                        it = new Intent(context, JobActivity.class);
-                        it.putExtra("flag", position);
-                        context.startActivity(it);
-                        break;
-                    case 1:
-                        it = new Intent(context, JobActivity.class);
-                        it.putExtra("flag", position);
-                        context.startActivity(it);
-                        break;
-                    case 2:
-                        if (CheckLogin()) {
-                            it=new Intent(context, LittleLessionActivity.class);
-                            it.putExtra("flag",true);
-                            context.startActivity(it);
-                        }
-                        break;
-                    case 3:
-                        if (CheckLogin()) {
-                            it = new Intent(context, PublishResumeActivity.class);
-                            context.startActivity(it);
-                        }
-
-                        break;
-                    case 4:
-                        if (CheckLogin()) {
-                            it=new Intent(context, Publish_Company_Activity.class);
+                if (CheckLogin()) {
+                    switch (position) {
+                        case 0:
+                            it = new Intent(context, PiPeiActivity.class);
 
                             context.startActivity(it);
-                        }
-                        break;
-                    case 5:
-                        if (CheckLogin()) {
-                            it=new Intent(context, EnterPassCodeActivity.class);
-                            it.putExtra("flag",true);
+                            break;
+                        case 1:
+                            it = new Intent(context, ZhaoPinActivity.class);
                             context.startActivity(it);
-                        }
-                        break;
-                    case 6:
-                        if (CheckLogin()) {
-                            it=new Intent(context, EnterPassCodeActivity.class);
-                            it.putExtra("flag",false);
-                            context.startActivity(it);
-                        }
-                        break;
-                    case 7:
-                        if (CheckLogin()) {
-                           it=new Intent(context, LittleLessionActivity.class);
-                           context.startActivity(it);
-                        }
-                        break;
-                    case 8:
-                        if (CheckLogin()) {
-                            it=new Intent(context, PeixunActivity.class);
-                            context.startActivity(it);
-                        }
-                        break;
+                            break;
+                        case 2:
 
+                                it = new Intent(context, XinChouActivity.class);
+
+                                context.startActivity(it);
+
+                            break;
+                        case 3:
+
+                                it = new Intent(context, EnterPassCodeActivity.class);
+                                it.putExtra("flag", false);
+                                context.startActivity(it);
+
+
+                            break;
+                        case 4:
+
+                                it = new Intent(context, PeixunActivity.class);
+
+                                context.startActivity(it);
+
+                            break;
+                        case 5:
+
+                            break;
+                        case 6:
+
+                            break;
+                        case 7:
+
+                            break;
+                        case 8:
+
+                                it = new Intent(context, LittleLessionActivity.class);
+                                context.startActivity(it);
+
+                            break;
+
+                    }
                 }
             }
         });
@@ -218,11 +211,11 @@ public class BaseFragment extends Fragment {
 
     }
 
-    private int ids[] = {R.drawable.publish_icon_job, R.drawable.publish_icon_jianli, R.drawable.publish_icon_piaowu, R.drawable.publish_icon_sale,
-            R.drawable.publish_icon_house,
-            R.drawable.publish_icon_car, R.drawable.publish_icon_zhuangxiujc, R.drawable.publish_icon_jiaoyu, R.drawable.publish_icon_pets
+    private int ids[] = {R.drawable.publish_icon_piaowu, R.drawable.publish_icon_jianli, R.drawable.icon_post_normal, R.drawable.publish_icon_sale,
+            R.drawable.publish_icon_jiaoyu,
+            R.drawable.publish_icon_pets, R.drawable.publish_icon_zhuangxiujc, R.drawable.near_2nd_hand_house_pressed, R.drawable.near_fulltime_jobs_pressed
     };
-    private String strs[] = {"招聘信息", "人才浏览", "人职匹配", "求职发布", "招聘发布", "薪酬评价", "绩效评估", "微课程", "基础培训"};
+    private String strs[] = {"人职匹配", "招聘应聘", "薪酬激励", "绩效考评", "学习培训", "员工关系", "建章利导", "人员流动", "英才成长"};
 
     private void initgridlist() {
         gridlist = new ArrayList<GridItem>();
